@@ -112,10 +112,10 @@ image{
   <div class="card-body">
     <div class="form-group">
   <input type="text" rows="10" name="pesan" class="form-control kelas"
-  placeholder="masukan pesan" required>
+  placeholder="masukan pesan" required id="isi">
   </input>
     </div>
-<button type="submit" class="btn btn-primary mt-3 col-sm-6">kirim</button>
+<button type="submit" class="btn btn-primary mt-3 col-sm-6" id="btn">kirim</button>
   </div>
 </form>
 </div>  
@@ -126,6 +126,24 @@ src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.j
 integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
 crossorigin="anonymous"></script>
 
-<script></script>
+<script>
+ const tombol = document.getElementById("btn")
+
+  const isi = document.getElementById("isi")
+
+  tombol.addEventListener("click",function(){
+
+    if(isi.value==""){
+
+      alert("masukan pesan terlebih dahulu")
+
+    }else{
+
+    alert("pesan terkirim")
+
+    }
+
+  })
+</script>
 </body>
 </html>
