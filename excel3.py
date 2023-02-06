@@ -15,7 +15,8 @@ def beranda():
       df.to_excel(file, index=False)
       print("data berhasil masuk")
       
-  return render_template("bst2.html")
+  return render_template("index.html")
 
 if __name__=="__main__":
  	app.run(debug=True)
+
